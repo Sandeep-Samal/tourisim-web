@@ -3,6 +3,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setIsOpen } from "../../Actions/CommonActions";
 import AppLogo from "../../assets/images/logos.png";
+import giphy from "../../assets/images/giphy.gif";
 import "../componentStyle.css";
 
 const Header = () => {
@@ -20,6 +21,7 @@ const Header = () => {
   };
   return (
     <div className="header">
+      <div className="logo">
       <img className="orgLogo" src={AppLogo} alt="" onClick={clicked} />
       <Typography
         gutterBottom
@@ -34,6 +36,8 @@ const Header = () => {
       >
         Tours and Travels
       </Typography>
+      </div>
+      <img className="giphy" src={giphy} alt="" />
     </div>
   );
 };
